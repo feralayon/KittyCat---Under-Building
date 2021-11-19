@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>KittyCare- Cuidado remoto de gatos</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="estilos.css"/>
+		<script>function cotizarkittycare()
+		{
+			var s = 0;
+			for (i = 0; i < 6; i++)
+				if (document.form1.checkbox[i].checked) 
+					s += parseInt(document.getElementById('campo'+(i+1)).value);
+			return s;
+		}
+		</script>
+
+
+
+	</head>
+	<body>
+
+		<!-- Cabecera -->
+			<section id="cabecera">
+				<header>
+					<span class="imagen avatar"><img src="imagenes/avatar2.jpg" alt="" /></span>
+					<h1 id="logo"><a href="index.html">KittyCare</a></h1>
+					<p>Cuidamos la felicidad de tu gato<br />
+						cuando no estas</p>
+				</header>
+				<nav id="secciones">
+					<ul>
+						<li><a href="#primero">Cuál es el valor de KittyCare</a></li>
+						<li><a href="#segundo">Cotiza tu KittyCare</a></li>						
+					</ul>
+				</nav>
+				
+			</section>
+
+		<!-- Cuerpo -->
+			<div id="cuerpo">
+
+				<!-- Principal -->
+					<div id="principal">
+
+						<!-- Primero -->
+							<section id="primero">
+								<div class="imagen principal" data-position="center">
+									<img src="imagenes/banner3.jpg" alt="" href="index.html"/>
+								</div>
+								<div class="contenedor">
+									<header class="inicial">
+										<h2><a href="index.html">KittyCare</a></h2>
+										<p>El valor de acompañar a tu amigo felino.</p>
+									</header>
+									<p>Nuestro servicio de cuidado automático los puedes obtener en la modalidad de arriendo o de compra de los equipos automáticos, garantizando siempre la disponibilidad e inmediatez de la información de como se encuentra tu amigo gatuno.La instalación y programación están incluidos en el servicios</p>
+								</div>
+							</section>	
+							<!-- Segundo -->
+							<section id="segundo">
+								<div class="contenedor">
+									<h3 class="text-center">Cotiza tu KittyCare</h3>
+									<b>Marca los servicios que le traerán felicidad a tu gato</b>
+									<form name="form1" method="post" action="">
+										<p>
+											<input name="checkbox" type="checkbox" onclick="document.getElementById('campo1').value=this.checked?this.value:''" value="150000">
+											<a><b>Servicio de monitoreo y compañía de tu amigo felino con el robot EBO</b>. Instalación y configuración del Robot EBO de acuerdo a la personalidad de tu gato. Alquiler, conexión a la plataforma en la nube y acceso a las imagenes de forma remota, interaccion con audio y reportes de felicedad y estado de salud.</a>
+											<br>
+											<a>Valor x semana</a>
+											<input type="text" id="campo1" size="12">
+										</p>
+										<p>
+											<input name="checkbox" type="checkbox" onclick="document.getElementById('campo2').value=this.checked?this.value:''" value="150000">
+											<a><b>Servicio de atención de alimentación e hidratación de tu amigo felino con los dispensadores automáticos de alimento y agua filtrada</b>. Instalación y configuración de los dispensadores de acuerdo a la identidad de tu gato. Alquiler, conexión a la plataforma en la nube y acceso a las imagenes de forma remota y reportes de felicedad y estado de salud.</a>
+											<br>
+											<a>Valor x semana</a>
+											<input type="text" id="campo2" size="12">
+										</p>
+										<p>
+											<input name="checkbox" type="checkbox" onclick="document.getElementById('campo3').value=this.checked?this.value:''" value="150000">
+											<a><b>Servicio de propuesta de juegos y actividades para tu amigo felino con el autómata de juegos.</b> Instalación y configuración del Robot EBO de acuerdo a la personalidad de tu gato. Alquiler, conexión a la plataforma en la nuve y acceso a las imagenes de forma remota, interaccion con audio y reportes de felicedad y estado de salud.</a>
+											<br>
+											<a>Valor x semana</a>
+											<input type="text" id="campo3" size="12">
+										</p>	
+										<p>
+											<input name="checkbox" type="checkbox" onclick="document.getElementById('campo4').value=this.checked?this.value:''" value="150000">
+											<a><b>Servicio de arenera con limpieza automática y embolsado de residuos para tu amigo felino con la caja de recolección automática</b>. Instalación y configuración del Robot EBO de acuerdo a la personalidad de tu gato. Alquiler, conexión a la plataforma en la nuve y acceso a las imagenes de forma remota, interaccion con audio y reportes de felicedad y estado de salud.</a>
+											<br>
+											<a>Valor x semana</a>
+											<input type="text" id="campo4" size="12">
+										</p>
+										<p>
+											  <input name="" type="button" onclick="document.getElementById('campo5').value=cotizarkittycare()" value="Calcular el valor de la felicidad gatuna">
+										</p>
+											<a><b>Para hacer feliz a tu gato tan solo invertirás a la semana</b></a>
+										<p>
+											  <input type="text" id="campo5" size="8">
+										</p>
+									  </form>
+								</div>
+							</section>
+					</div>
+			</div>			
+				<!-- Footer -->
+					<section id="footer">
+						<div class="contenedor">
+							<ul class="copyright">
+								<li>&copy; KittyCare - Cuidamos tu gato cuando no estas. Todos los derechos reservados.</li><li>Deseñó: <a href="http://KittyCare.net">KittyCare</a></li>
+							</ul>
+						</div>
+					</section>
+		<!-- Scripts -->
+		<script src="js/cotizadorkittycare.js"></script>
+		</body>
+</html>
